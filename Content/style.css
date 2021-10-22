@@ -1,0 +1,873 @@
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GLOBAL CSS STYLE
+* 02.PRELOADER & BOUNCE CCS STYLE
+* 03.HOMEPAGE CSS STYLE
+    -LOGO CSS
+    -MENU CSS
+* 04.ABOUT CSS STYLE
+* 05.SKILLS CSS STYLE
+* 06.RESUME CSS STYLE
+* 07.SERVICE CSS STYLE
+* 08.WORK CSS STYLE
+* 09.TESTIMONIAL CSS STYLE
+* 10.BLOGS CSS STYLE
+* 11.CONTACT CSS STYLE
+* 12.FOOTER CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GLOBAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+@font-face {
+    font-family: 'SDF';
+    src: url('../fonts/IRANSans-Light-web.woff') format('woff'),
+         url('../fonts/IRANSans-Light-web.ttf') format('truetype');
+
+    font-weight: normal;
+}
+@font-face {
+  font-family: Parastoo;
+  src: url('../fonts/Parastoo.eot');
+  src: url('../fonts/Parastoo.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Parastoo.woff') format('woff'),
+       url('../fonts/Parastoo.ttf') format('truetype');
+  font-weight: normal;
+}
+
+body {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    height: 100%;
+    font-family: Parastoo;
+    color: #333;
+    background: #F5F5F5;
+}
+
+html,
+body {
+    height: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: SDF;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    color: #000;
+}
+
+img {
+    width: 100%;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    line-height: 32px;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.no-padding {
+    padding: 0
+}
+
+.section-padding {
+    padding: 30px 0px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    margin-top: 0;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+
+.section-title p {
+    font-weight: 300;
+}
+
+.area-shadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+    padding: 60px;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.PRELOADER & BOUNCE CCS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.preloader {
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+
+.status-mes {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -22px 0 0 -22px;
+    font-size: 10px;
+    text-indent: -12345px;
+    border-top: 8px solid #F5F5F5;
+    border-right: 8px solid #F5F5F5;
+    border-bottom: 8px solid #F5F5F5;
+    border-left: 8px solid #03A9F4;
+    border-radius: 50%;
+    -webkit-animation: spinner 1000ms infinite linear;
+    animation: spinner 1000ms infinite linear;
+    z-index: 10000;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03.HOMEPAGE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.welcome-area {
+    height: 100%;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.welcome-image-area {
+    position: relative;
+    height: 100%;
+    background-image: url('Images/bg.jpg');
+    background-size: cover;
+    z-index: 1;
+}
+
+.welcome-image-area:after {
+    position: absolute;
+    background: rgba(3, 169, 244, .4);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+
+.particle-bg {
+    position: relative;
+    height: 100%;
+    background: url(../images/bg/bg2.jpg);
+    background-size: cover;
+    z-index: 1;
+}
+
+.particle-bg:after {
+    position: absolute;
+    background: rgba(0, 0, 0, .6);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+
+.display-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.display-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header-text {
+    padding: 0px 100px;
+    margin-top: 100px;
+}
+
+.header-text img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 2px solid #fff;
+}
+
+.header-text h2 {
+    color: #fff;
+    font-size: 70px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.header-text p {
+    color: #fafafa;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.header-top-area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    background: #03A9F4;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .29);
+}
+
+.logo {
+    padding-top: 28px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.logo a {
+    display: block;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.mainmenu .navbar-nav li a {
+    color: #fff;
+    font-size: 10px;
+    padding: 30px 15px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    font-weight: 500;
+    font-family: SDF;
+    text-transform: uppercase;
+}
+
+.mainmenu .navbar-nav li a:hover {
+    color: #03A9F4;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background: #fff;
+}
+
+.menu-bg .mainmenu .navbar-nav li.active a {
+    color: #03A9F4;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background: #fff;
+}
+
+.nav li a:focus,
+.nav li a:hover {
+    background: none;
+    color: #fff;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.navbar {
+    margin: 0;
+}
+
+.menu-bg {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.menu-bg .logo {
+    padding-top: 18px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.menu-bg .mainmenu .navbar-nav li a {
+    padding: 20px 15px;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04.ABOUT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.about-me-area {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.about-image {}
+
+.about-text p {
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 28px;
+}
+
+.about-text ul {
+    text-align: center;
+    padding: 0px 150px;
+}
+
+.about-text ul li {
+    margin-bottom: 25px;
+    color: #a3a3a3;
+    display: inline-block;
+    background: #03A9F4;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05.SKILLS CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.single-progress-bar {
+    margin-bottom: 10px;
+}
+
+.my-skill {}
+
+.progress-bar {
+    background: #03A9F4;
+}
+
+.progress {
+    height: 10px;
+    margin-bottom: 12px;
+    background: #F5F5F5;
+    box-shadow: none !important;
+    border: 0;
+    margin-top: 4px;
+    border-radius: 0;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06.RESUME CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.resume-design-area {}
+
+.single-resume h3 {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.single-resume h3:before {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    border: 2px solid #03A9F4;
+    background-color: transparent;
+    right: -51px;
+    content: '';
+    top: 15px;
+    background: #03A9F4;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.resume-left h2 {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.resume-right:before {
+    background-color: #03A9F4;
+    opacity: .5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    content: '';
+    height: calc(100% + 0px);
+    width: 1px;
+    position: absolute;
+    right: -36px;
+    top: 16px;
+}
+
+.resume-right p {
+    margin-bottom: 20px;
+}
+
+.resume-right h4 {
+    font-size: 12px;
+    line-height: 32px;
+    margin-top: 10;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07.SERVICE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.service-area {}
+
+.single-service i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    background: #03A9F4;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    line-height: 80px;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.single-service h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 20px 0px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    color: #232323;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.single-service p {
+    color: #232323;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08.WORK CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.work {}
+
+.work-inner .mix {
+    display: none;
+}
+
+ul.work {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ul.work li {
+    display: inline-block;
+    padding-bottom: 4px;
+    margin: 0 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    color: #938d8d;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+}
+
+ul.work li:hover {
+    color: #03A9F4;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+ul.work li.active {
+    color: #03A9F4;
+}
+
+.work .item {
+    padding: 0;
+    margin: 0;
+}
+
+.work .col-md-4 {
+    padding: 0;
+    margin: 0;
+}
+
+.work figure.effect-ruby img {
+    height: auto;
+    width: 100%;
+}
+
+.work .grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.work .grid figure:hover {
+    background: rgba(3, 169, 244, .8);
+}
+
+.work figure.effect-ruby h2 {
+    margin-top: 20%;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 600;
+    -webkit-transition: .3s;
+    transition: .3s;
+    display: inline-block;
+    color: #fff;
+}
+
+.work figure.effect-ruby p {
+    font-size: 14px;
+    text-transform: capitalize;
+    border: none;
+    padding: 0;
+    margin: 5px 0px;
+}
+
+.work figure.effect-ruby p strong {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+
+.work .item:hover figure.effect-ruby h2 {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09.TESTIMONIAL CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.testimonial-area {}
+
+.testimonial-list {}
+
+.single-testimonial h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    -webkit-transition: .3s;
+    transition: .3s;
+    color: #232323;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.single-testimonial h3 {
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.single-testimonial p {
+    line-height: 25px;
+}
+
+.owl-theme .owl-controls .owl-page span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin: 5px 7px;
+    border-radius: 20px;
+    background: #03A9F4;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 10.BLOG CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.blog-area {
+    background: #f7f7f7;
+}
+
+.single-blog {
+    text-align: center;
+    padding: 10px;
+}
+
+.single-blog a.blog-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 0px 10px;
+}
+
+.single-blog a.blog-title:hover {
+    color: #000;
+}
+
+.single-blog p {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+a.read-more {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 10px;
+    border: 1px solid #03A9F4;
+    font-size: 14px;
+    background: #03A9F4;
+    text-transform: capitalize;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+a.read-more:hover {
+    background: transparent;
+    border: 1px solid #03A9F4;
+    color: #000;
+    -webkit-transition: all 0.4s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 11.CONTACT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.contact-me-area {}
+
+.form-control {
+    display: block;
+    border: 0px;
+    width: 100%;
+    height: 45px;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #F7F7F7;
+    background-image: none;
+    border-radius: 0px;
+    box-shadow: none;
+    margin-bottom: 25px;
+}
+
+.form-control:focus {
+    border-color: #000;
+    outline: 0;
+    box-shadow: none;
+}
+
+.contact-form input[type='submit'] {
+    display: inline-block;
+    color: #fff;
+    background: none;
+    padding: 15px 25px;
+    border: 1px solid #03A9F4;
+    font-size: 14px;
+    border-radius: 0px;
+    font-weight: 500;
+    -webkit-transition: .3s;
+    transition: .3s;
+    background: #03A9F4;
+    text-transform: capitalize;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact-form input[type='submit']:hover {
+    background: transparent;
+    border: 1px solid #03A9F4;
+    color: #000;
+    -webkit-transition: all 0.4s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn:active:focus,
+.btn:focus {
+    outline: none;
+}
+
+.success {
+    background: #50B948 none repeat scroll 0 0;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 12.FOOTER CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.footer-area {
+    padding: 80px 0px;
+}
+
+.social-links ul {
+    padding: 0;
+    margin: 0;
+}
+
+.social-links ul li {
+    display: inline-block;
+}
+
+.social-links ul li a {
+    font-size: 18px;
+    color: #222222;
+    margin: 10px 5px;
+    display: block;
+}
+
+.header-links ul li a {
+    color: #000;
+    background: #fff;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.header-links ul li a:hover {
+    color: #03A9F4;
+}
+
+.footer-area p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #222222;
+}
+/* Credit to bootsnipp.com for the css for the color graph */
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+.dropdown-menu li a{color:black !important;padding:15px !important;}
+.dropdown-menu li a:hover{background:#03a9f4 !important;color:white !important;}
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover{color:black !important;}
