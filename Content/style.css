@@ -26,19 +26,12 @@
 * ----------------------------------------------------------------------------------------
 */
 @font-face {
-    font-family: 'SDF';
+    font-family: 'IRANSans';
     src: url('../fonts/IRANSans-Light-web.woff') format('woff'),
          url('../fonts/IRANSans-Light-web.ttf') format('truetype');
-
-    font-weight: normal;
-}
-@font-face {
-  font-family: Parastoo;
-  src: url('../fonts/Parastoo.eot');
-  src: url('../fonts/Parastoo.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Parastoo.woff') format('woff'),
-       url('../fonts/Parastoo.ttf') format('truetype');
-  font-weight: normal;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -46,7 +39,7 @@ body {
     font-weight: 300;
     line-height: 24px;
     height: 100%;
-    font-family: Parastoo;
+    font-family: 'IRANSans', Tahoma, Arial, sans-serif;
     color: #333;
     background: #F5F5F5;
 }
@@ -62,7 +55,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: SDF;
+    font-family: 'IRANSans', Tahoma, Arial, sans-serif;
 }
 
 a {
@@ -129,9 +122,11 @@ fieldset {
 }
 
 .area-shadow {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
     background: #fff;
     padding: 60px;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
 
@@ -266,9 +261,12 @@ fieldset {
 
 .header-text img {
     width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin: 0 auto;
-    border: 2px solid #fff;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
 }
 
 .header-text h2 {
@@ -312,13 +310,12 @@ fieldset {
 
 .mainmenu .navbar-nav li a {
     color: #fff;
-    font-size: 10px;
+    font-size: 14px;
     padding: 30px 15px;
     -webkit-transition: .3s;
     transition: .3s;
     font-weight: 500;
-    font-family: SDF;
-    text-transform: uppercase;
+    font-family: 'IRANSans', Tahoma, Arial, sans-serif;
 }
 
 .mainmenu .navbar-nav li a:hover {
@@ -385,18 +382,26 @@ fieldset {
 }
 
 .about-text ul {
-    text-align: center;
-    padding: 0px 150px;
+    text-align: right;
+    padding: 0px 20px;
+    list-style: none;
 }
 
 .about-text ul li {
-    margin-bottom: 25px;
-    color: #a3a3a3;
-    display: inline-block;
-    background: #03A9F4;
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 30px;
+    margin-bottom: 15px;
+    color: #333;
+    display: block;
+    padding: 12px 20px;
+    background: #f9f9f9;
+    border-right: 4px solid #03A9F4;
+    border-radius: 4px;
+    line-height: 1.8;
+    transition: all 0.3s ease;
+}
+
+.about-text ul li:hover {
+    background: #f0f8ff;
+    transform: translateX(-5px);
 }
 
 
@@ -840,16 +845,22 @@ a.read-more:hover {
 .header-links ul li a {
     color: #000;
     background: #fff;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     text-align: center;
     border-radius: 50%;
-    line-height: 30px;
-    font-size: 14px;
+    line-height: 40px;
+    font-size: 16px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header-links ul li a:hover {
-    color: #03A9F4;
+    color: #fff;
+    background: #03A9F4;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(3, 169, 244, 0.4);
 }
 
 .footer-area p {
