@@ -208,20 +208,52 @@ fieldset {
 .welcome-image-area {
     position: relative;
     height: 100%;
-    background-image: url('Images/bg.jpg');
-    background-size: cover;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.welcome-image-area:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 30%);
     z-index: 1;
 }
 
 .welcome-image-area:after {
+    content: '';
     position: absolute;
-    background: rgba(3, 169, 244, .4);
-    left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.03) 30%, rgba(255, 255, 255, 0.03) 70%, transparent 70%),
+        linear-gradient(-45deg, transparent 30%, rgba(255, 255, 255, 0.03) 30%, rgba(255, 255, 255, 0.03) 70%, transparent 70%);
+    background-size: 60px 60px;
+    z-index: 2;
+    opacity: 0.5;
 }
 
 .particle-bg {
@@ -882,3 +914,641 @@ a.read-more:hover {
 .dropdown-menu li a{color:black !important;padding:15px !important;}
 .dropdown-menu li a:hover{background:#03a9f4 !important;color:white !important;}
 .nav .open > a, .nav .open > a:focus, .nav .open > a:hover{color:black !important;}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* ENHANCED BEAUTIFUL STYLING
+* ----------------------------------------------------------------------------------------
+*/
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced body background with gradient */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Beautiful section title styling */
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.section-title h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #03A9F4, #0288D1);
+    border-radius: 2px;
+}
+
+/* Enhanced area shadow with gradient border */
+.area-shadow {
+    position: relative;
+    background: #fff;
+    padding: 60px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.area-shadow:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #03A9F4, #0288D1, #01579B);
+}
+
+.area-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Enhanced header with glassmorphism effect */
+.header-top-area {
+    background: rgba(3, 169, 244, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Beautiful profile image with animated border */
+.header-text img {
+    border: 5px solid #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.header-text img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Enhanced hero text */
+.header-text h2 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease;
+}
+
+.header-text p {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1.2s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Beautiful social media icons */
+.header-links ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.header-links ul li a {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-links ul li a:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(3, 169, 244, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.header-links ul li a:hover:before {
+    width: 100%;
+    height: 100%;
+}
+
+/* Enhanced list items with beautiful styling */
+.about-text ul li {
+    position: relative;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-right: 4px solid #03A9F4;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-text ul li:before {
+    content: '✓';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: #03A9F4;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about-text ul li:hover {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    transform: translateX(-10px);
+    box-shadow: 0 5px 20px rgba(3, 169, 244, 0.2);
+}
+
+.about-text ul li:hover:before {
+    opacity: 1;
+}
+
+.about-text ul li strong {
+    color: #03A9F4;
+    font-weight: 600;
+}
+
+/* Beautiful paragraph styling */
+.about-text p {
+    color: #555;
+    line-height: 2.2;
+    text-align: justify;
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 8px;
+    border-left: 4px solid #03A9F4;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Enhanced timeline for education */
+.single-resume {
+    position: relative;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.single-resume:hover {
+    transform: translateX(-5px);
+}
+
+.resume-left h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(3, 169, 244, 0.1);
+}
+
+.resume-right h3 {
+    color: #2c3e50;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.resume-right h4 {
+    color: #03A9F4;
+    font-size: 14px;
+    font-weight: 500;
+    background: #e3f2fd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.single-resume:hover .resume-right h3 {
+    color: #03A9F4;
+}
+
+/* Enhanced navigation menu */
+.mainmenu .navbar-nav li {
+    position: relative;
+}
+
+.mainmenu .navbar-nav li:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.mainmenu .navbar-nav li:hover:after,
+.mainmenu .navbar-nav li.active:after {
+    width: 80%;
+}
+
+/* Beautiful footer */
+.footer-area {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-area:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #03A9F4, #0288D1, #01579B);
+}
+
+.footer-area p {
+    color: #ecf0f1;
+}
+
+/* Responsive enhancements */
+@media only screen and (max-width: 767px) {
+    .area-shadow {
+        padding: 30px 20px;
+        border-radius: 10px;
+    }
+    
+    .header-text {
+        padding: 0px 20px;
+        margin-top: 50px;
+    }
+    
+    .header-text h2 {
+        font-size: 35px;
+    }
+    
+    .header-text p {
+        font-size: 16px;
+    }
+    
+    .header-text img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .section-title h2 {
+        font-size: 28px;
+    }
+    
+    .about-text ul li {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .header-links ul {
+        gap: 10px;
+    }
+    
+    .header-links ul li a {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+    }
+}
+
+/* Loading animation for sections */
+.about-me-area,
+.resume-design-area {
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Beautiful scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #03A9F4, #0288D1);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0288D1, #01579B);
+}
+
+/* Animated geometric shapes in hero */
+.welcome-image-area .display-table {
+    position: relative;
+    z-index: 10;
+}
+
+/* Floating geometric shapes */
+.welcome-image-area .display-table:before,
+.welcome-image-area .display-table:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.welcome-image-area .display-table:before {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.welcome-image-area .display-table:after {
+    width: 200px;
+    height: 200px;
+    bottom: 15%;
+    right: 10%;
+    animation-delay: 3s;
+}
+
+/* Add subtle pattern to background */
+body:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(3, 169, 244, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(2, 136, 209, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* Enhanced Hero UI Styling */
+.header-text {
+    position: relative;
+    z-index: 100;
+}
+
+/* Glowing effect behind profile image */
+.header-text img {
+    position: relative;
+    z-index: 10;
+}
+
+.header-text .img-responsive {
+    position: relative;
+}
+
+/* Beautiful card effect for hero content */
+.header-text h2,
+.header-text p {
+    position: relative;
+    z-index: 10;
+}
+
+/* Add particles effect */
+@keyframes particle-float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px);
+        opacity: 0.6;
+    }
+}
+
+/* Mesh gradient background alternative */
+.welcome-image-area.mesh-gradient {
+    background: 
+        radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+        radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+        radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+}
+
+/* Wave effect at bottom of hero */
+.welcome-image-area .display-table-cell:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f5f7fa' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;
+    background-size: cover;
+    z-index: 5;
+}
+
+/* Glassmorphism card for hero content */
+.header-text-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Animated gradient text */
+.gradient-text {
+    background: linear-gradient(45deg, #fff, #e0e0e0, #fff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Decorative elements */
+.hero-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-decoration span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate-decoration 25s linear infinite;
+    bottom: -150px;
+}
+
+.hero-decoration span:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.hero-decoration span:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.hero-decoration span:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.hero-decoration span:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.hero-decoration span:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.hero-decoration span:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.hero-decoration span:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.hero-decoration span:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.hero-decoration span:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.hero-decoration span:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate-decoration {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+/* Enhanced profile image glow */
+.header-text img {
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.3),
+        0 0 0 10px rgba(255, 255, 255, 0.1),
+        0 0 60px rgba(255, 255, 255, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive hero adjustments */
+@media only screen and (max-width: 767px) {
+    .welcome-image-area .display-table:before,
+    .welcome-image-area .display-table:after {
+        display: none;
+    }
+    
+    .hero-decoration span {
+        display: none;
+    }
+}
