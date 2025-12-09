@@ -117,6 +117,7 @@
                 <div class="hidden md:flex items-center space-x-reverse space-x-8">
                     <a href="#home" class="text-gray-700 hover:text-blue-600 transition px-3 py-2 rounded-md">خانه</a>
                     <a href="#about" class="text-gray-700 hover:text-blue-600 transition px-3 py-2 rounded-md">درباره من</a>
+                    <a href="#current-status" class="text-gray-700 hover:text-blue-600 transition px-3 py-2 rounded-md">نوبت‌دهی</a>
                     <a href="#experience" class="text-gray-700 hover:text-blue-600 transition px-3 py-2 rounded-md">سوابق کاری</a>
                     <a href="#resume" class="text-gray-700 hover:text-blue-600 transition px-3 py-2 rounded-md">تحصیلات</a>
                 </div>
@@ -132,6 +133,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">خانه</a>
                 <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">درباره من</a>
+                <a href="#current-status" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">نوبت‌دهی</a>
                 <a href="#experience" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">سوابق کاری</a>
                 <a href="#resume" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">تحصیلات</a>
             </div>
@@ -233,7 +235,75 @@
         </div>
     </header>
 
+    <!-- Current Status Section -->
+    <section id="current-status" class="py-10 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">وضعیت فعلی و نوبت‌دهی</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Tehran Card -->
+                <div class="bg-gray-100/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-300/50 shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-blue-100/70 backdrop-blur-sm rounded-full p-4 mb-4"></div>
+                            <i class="fas fa-map-marker-alt text-4xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">تهران</h3>
+                        <p class="text-lg text-gray-700">در حال حاضر مشغول به فعالیت در تهران</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white/60 backdrop-blur-md rounded-xl p-4 shadow-md border border-gray-200/50">
+                            <p class="text-sm text-gray-600 mb-2">رزرو نوبت آنلاین:</p>
+                            <a href="https://soleymaninobat.iums.ac.ir/QueueWeb/SimpleQ/GetDates?ItemId=585" 
+                               target="_blank" 
+                               class="inline-flex items-center justify-center w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">
+                                <i class="fas fa-calendar-check ml-2"></i>
+                                رزرو نوبت در تهران
+                                <i class="fas fa-external-link-alt mr-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Fasa Card -->
+                <div class="bg-gray-100/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-300/50 shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-purple-100/7ounded-rop-blur-sm rounded-full p-4 mb-4">
+                            <i class="fas fa-map-marker-alt text-4xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">فسا</h3>
+                        <p class="text-lg text-gray-700">حضور در مطب‌های فسا</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white/60 backdrop-blur-md rounded-xl p-4 shadow-md border border-gray-200/50">
+                            <p class="text-sm text-gray-600 mb-2">اطلاعات بیشتر و رزرو نوبت:</p>
+                            <a href="https://www.paziresh24.com/dr/%D8%AF%DA%A9%D8%AA%D8%B1-%D9%88%D8%AD%DB%8C%D8%AF-%D8%B2%D8%A7%D8%B1%D8%B9" 
+                               target="_blank" 
+                               class="inline-flex items-center justify-center w-full bg-purple-600 text-white px-6 py-3 rounded-xl font-bold text-lg hover:bg-purple-700 transition-all shadow-lg hover:shadow-xl">
+                                <i class="fas fa-calendar-check ml-2"></i>
+                                مشاهده در پذیرش ۲۴
+                                <i class="fas fa-external-link-alt mr-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="mt-8 text-center">
+                <div class="bg-blue-50 rounded-2xl p-6 border-2 border-blue-200 shadow-md">
+                    <p class="text-lg text-gray-800">
+                        <i class="fas fa-info-circle ml-2 text-blue-600"></i>
+                        برای کسب اطلاعات بیشتر درباره ساعات ویزیت و آدرس مطب‌ها، لطفاً از لینک‌های بالا استفاده کنید.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="py-10 md:py-20 bg-white">
@@ -428,7 +498,7 @@
                                 <i class="fas fa-chevron-left text-blue-600 ml-2 mt-1"></i>
                                 <span><strong>پزشک معتمد دانشگاه</strong> و <strong>پزشک معتمد آموزش و پرورش</strong></span>
                             </li>
-                            <li class="flex items-start">
+ re                            <li class="flex items-start">
                                 <i class="fas fa-chevron-left text-blue-600 ml-2 mt-1"></i>
                                 <span>پزشک و <strong>مسئول شبکه بهداشت و درمان</strong></span>
                             </li>
@@ -453,8 +523,9 @@
             </div>
         </div>
     </section>
+
     <!-- Experience Section -->
-    <section id="experience" class="py-10 md:py-20 bg-gray-50">
+    <section id="experience" class="py-10 md:py-20 bg-gray-50"></section>
         <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">سوابق کاری</h2>
